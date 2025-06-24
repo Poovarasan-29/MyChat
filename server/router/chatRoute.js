@@ -28,12 +28,6 @@ router.get("/get-user-chat", checkUsers, async (req, res) => {
   return res.status(200).json({ chats });
 });
 
-router.post("/save-message", checkUsers, async (req, res) => {
-  const { senderPhone: A, receiverPhone: B, message } = req.query;
 
-  await ChatModel.insertOne({ sender: A, receiver: B, message });
-
-  res.status(201).json({ message: "Message Saved" });
-});
 
 module.exports = router;

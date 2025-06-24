@@ -49,7 +49,14 @@ io.on("connection", (socket) => {
         userContact: receiver,
       });
 
-      if (!isReceiverNotInSenderContact.contacts.includes(sender)) {
+      if (!isReceiverNotInSenderContact) {
+        await ContactModel.insertOne({
+          userContact: receiver,
+          contacts: [sender],
+        });
+      }
+
+      if (!isReceiverNotInSenderContact?.contacts.includes(sender)) {
         isReceiverNotInSenderContact.contacts.push(sender);
         await isReceiverNotInSenderContact.save();
       }
