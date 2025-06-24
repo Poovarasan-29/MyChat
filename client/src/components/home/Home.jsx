@@ -1,7 +1,7 @@
 import styles from "./home.module.css"
 import { useLocation } from 'react-router-dom';
 import NewContact from './newContact/NewContact';
-import ShowContacts from './showContacts/showContacts';
+import ShowContacts from './showContacts/ShowContacts';
 import Chat from "./chat/Chat";
 import { useState } from "react";
 
@@ -16,17 +16,17 @@ function Home() {
         <h1 className={styles.h1}>My Chat</h1>
         <div>
             <h3>
-                Name : {userData.name}
+                Name : {userData?.name}
             </h3>
             <h3>
-                Phone : {userData.phoneNo}
+                Phone : {userData?.phoneNo}
             </h3>
         </div>
         <NewContact userData={userData} />
 
         <main className={styles.main}>
             <ShowContacts userData={userData} setReceiver={setReceiver} />
-            <Chat senderPhone={userData.phoneNo} receiverPhone={receiver} />
+            <Chat senderPhone={userData?.phoneNo} receiverPhone={receiver} />
         </main>
 
     </>

@@ -24,7 +24,7 @@ app.use(cors());
 // Enable CORS in Socket.IO
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // Allow this frontend origin
+    origin: process.env.FRONTEND_ORIGIN, // Allow this frontend origin
     methods: ["GET", "POST"],
     credentials: true,
   },
