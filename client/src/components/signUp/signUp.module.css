@@ -1,0 +1,69 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.h2 {
+  margin-bottom: 35px;
+  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.form {
+  /* border: 2px solid black; */
+  padding: 35px 30px;
+  box-shadow: 1px 1px 20px rgb(167, 164, 164);
+  border-radius: 10px;
+}
+
+.label {
+  display: block;
+  padding: 1px;
+}
+
+.input {
+  height: 35px;
+  width: 320px;
+  display: block;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.input:focus {
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.button {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 15px;
+  margin-top: 25px;
+  background-color: green;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button:hover {
+  background-color: rgb(82, 155, 8);
+  transition: 0.2s;
+}
+
+.navigate {
+  margin-top: 15px;
+}
+.navigate a {
+  text-decoration: none;
+  font-style: normal;
+  transition: 0.2s;
+}
+.navigate a:hover {
+  text-decoration: underline;
+  font-style: italic;
+  transition: 0.2s;
+}

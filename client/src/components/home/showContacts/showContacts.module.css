@@ -1,0 +1,28 @@
+.ul {
+  list-style: none;
+  padding: 2px;
+}
+.ul li {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 4px 1px;
+}
+.li {
+  background-color: inherit;
+}
+.ul li:first-child {
+  border-top: none;
+}
+
+.ul li:hover {
+  background-color: rgba(104, 100, 100, 0.5);
+}
+
+.clickedContact {
+  background-color: rgb(101, 100, 100);
+}
+
+.clickedContact:hover {
+  background-color: rgb(120, 120, 120) !important;
+}
